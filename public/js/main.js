@@ -17,9 +17,9 @@ const myVM = (() => {
             targetImg = lightbox.querySelector('img');
 
         let bioContent = `
-            <p>${person.bio}<p>
-            <h4>Social Media:/<h4>
-            ${renderSocialMedia(person.social)}
+            <p>${person.Description}<p>
+            
+            
         
         `;
 
@@ -54,7 +54,7 @@ const myVM = (() => {
 
     }
 
-    userButtons.forEach(button => button.addEventListener('click' , getUserData));
+    userButtons.forEach(button => button.addEventListener('click', getUserData));
 
     lightbox.querySelector('.close').addEventListener('click', function() {
         lightbox.classList.remove('show-lb');
