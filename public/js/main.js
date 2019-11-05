@@ -18,7 +18,7 @@ const myVM = (() => {
 
         let bioContent = `
             <p>${person.Description}<p>
-            
+            <h4><h4> 
             
         
         `;
@@ -28,6 +28,7 @@ const myVM = (() => {
         targetDiv.innerHTML = bioContent;
         targetImg.src = person.imgsrc;
 
+        lightbox.classList.remove('hidden');
         lightbox.classList.add('show-lb');
 
     }
@@ -57,6 +58,7 @@ const myVM = (() => {
     userButtons.forEach(button => button.addEventListener('click', getUserData));
 
     lightbox.querySelector('.close').addEventListener('click', function() {
+        lightbox.classList.add('hidden');
         lightbox.classList.remove('show-lb');
     });
 
